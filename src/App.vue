@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <VueEditor />
+    <AdminDashboard />
   </div>
 </template>
 
 <script>
-import VueEditor from './components/VueEditor.vue'
+import AdminDashboard from './components/AdminDashboard.vue'
+
 
 export default {
   name: 'App',
   components: {
-    VueEditor
+    AdminDashboard
   }
 }
 </script>

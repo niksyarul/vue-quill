@@ -1,5 +1,5 @@
 <template>
-  <vue-editor v-model="content" ::customModules="customModulesForEditor" :editorOptions="editorSettings" />
+    <vue-editor v-model="content" ::customModules="customModulesForEditor" :editorOptions="editorSettings" />
 </template>
 
 <script>
@@ -47,6 +47,20 @@ export default {
         }
       }
     };
-  }
+  },
+  watch: {
+      show(newVal) {
+        console.log('Alert is now ' + (newVal ? 'visible' : 'hidden'))
+      }
+    },
+    methods: {
+      toggle() {
+        console.log('Toggle button clicked')
+        this.show = !this.show
+      },
+      dismissed() {
+        console.log('Alert dismissed')
+      }
+    }
 };
 </script>
